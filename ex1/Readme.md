@@ -3,11 +3,23 @@
 
 :white_check_mark: Создала репозиторий на GitHub: [projectGB1](https://github.com/captaingitt/projectGB1.git)
 
-:white_check_mark: Нарисовала блок-схему алгоритма: ![она здесь](https://github.com/captaingitt/projectGB1/blob/main/ex1/diagram.drawio.png)
+:white_check_mark: Нарисовала блок-схему алгоритма:
+![она здесь](https://github.com/captaingitt/projectGB1/blob/main/ex1/diagram.drawio.png)
 
 :white_check_mark: Снабдила репозиторий оформленным текстовым описанием решения, который вы видите сейчас перед собой. 
 
 :white_check_mark: Написала программу, решающую поставленную задачу, вот она: [projectGB1](https://github.com/captaingitt/projectGB1/blob/main/ex1/Program.cs)  
+
+## Ход решения:
+* Создала строковый массив, решать планирую при помощи 5 методов:
+1. FillArray 
+2. GetValue
+3. CountNewArray
+4. CountLetter
+5. PrintArray
+* Прописала цикл в котором будут перебираться элементы массива. 
+* В тело цикла добавила условия выборки из условия задачи, если есть элемент удовлетворяющий условиям, тогда иннициализируется новый массив такого же типа и в ячейку нового массива записывается значение ячейки первичного массива.
+
 
 :white_check_mark: Использовала контроль версий в работе над этим проектом. Коммиты вы сможете увидеть по ссылке: [projectGB1_commits](https://github.com/captaingitt/projectGB1/commits/main) 
 
