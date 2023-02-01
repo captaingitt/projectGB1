@@ -1,27 +1,39 @@
-﻿void methodArray (string [] array)
+﻿string[] ReadArray()
 {
-    string[] newarr = new string[array.Length];
-    for (int i=0; i<array.Length; i++)
-    {      
-        if(array[i].Length<=3)
-        {
-        newarr[i]=array[i];;
-        Console.WriteLine(newarr[i]); 
-        }
-     }
-        Console.WriteLine(); 
+    Console.WriteLine("Введите элементы массива через пробел: ");
+    return Console.ReadLine().Split(" ");
 }
 
-void Print(string [] Array)
+string[] FilterArrayByLenght(string[] array, int lenght)
 {
-    for (int i=0; i<Array.Length; i++)
+    int resultArrayLenght = 0;
+    int[] resultIndexes = new int[array.Length];
+    for (int i = 0; i < array.Length; i++)
     {
-        Console.WriteLine(Array[i]);
+        if (array[i].Length <= lenght)
+        {
+            resultIndexes[resultArrayLenght] = i;
+            resultArrayLenght++;
+        }
     }
-    Console.WriteLine();
+    string[] result = new string[resultArrayLenght];
+    if (resultArrayLenght != 0)
+    {
+        for (int i = 0; i < result.Length; i++)
+        {
+            result[i] = array[resultIndexes[i]];
+        }
+    }
+    return result;
 }
 
-string [] array = {"hello", "2", "world", ":-)"};
+void GoodPrint(string[] inputArray, string[] resultArray)
+{
+    string formattedString = $"[{String.Join(" , ", inputArray)}] -> [{String.Join(" , ", resultArray)}]";
+    Console.WriteLine(formattedString);
+}
 
-methodArray(array);
-Print(array);
+
+string[] inputArray = ReadArray();
+string[] result = FilterArrayByLenght(inputArray, 3);
+GoodPrint(inputArray, result);
