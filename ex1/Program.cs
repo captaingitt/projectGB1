@@ -16,15 +16,17 @@ string[] FilterArrayByLenght(string[] array, int lenght)
             resultArrayLenght++;
         }
     }
-    string[] result = new string[resultArrayLenght];
-    if (resultArrayLenght != 0)
+
+
+string[] result = new string[resultArrayLenght];
+if (resultArrayLenght != 0)
+{
+    for (int i = 0; i < result.Length; i++)
     {
-        for (int i = 0; i < result.Length; i++)
-        {
-            result[i] = array[resultIndexes[i]];
-        }
+        result[i] = array[resultIndexes[i]];
     }
-    return result;
+}
+return result;
 }
 
 void GoodPrint(string[] inputArray, string[] resultArray)
