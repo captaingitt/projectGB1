@@ -17,7 +17,6 @@ string[] FilterArrayByLenght(string[] array, int lenght)
         }
     }
 
-
 string[] result = new string[resultArrayLenght];
 if (resultArrayLenght != 0)
 {
